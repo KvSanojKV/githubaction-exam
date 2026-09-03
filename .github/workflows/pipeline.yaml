@@ -1,14 +1,14 @@
 name: CICD pipeline
 on: push
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: ./build.sh
+      - run: npm test
 
-  notify:
-    needs: build
-    if: ${{ always() }}
+  deploy:
+    needs: test
+    if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Build failed"
+      - run: ./deploy.sh
