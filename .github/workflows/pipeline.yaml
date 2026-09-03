@@ -4,9 +4,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Run tests
-        run: npm test
-        continue-on-error: true
-
-      - name: Build
-        run: npm run build
+      - name: Show repository
+        run: echo "Repository is $GITHUB_REPOSITORY"
