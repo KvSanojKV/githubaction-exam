@@ -1,6 +1,6 @@
 name: CICD pipeline
 on: push
-paths:
+    paths:
       - 'src/**'
 jobs:
   test:
