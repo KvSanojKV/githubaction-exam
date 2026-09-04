@@ -26,7 +26,7 @@ jobs:
                tags: sanojkv/app-github-actions:${{ github.sha }}
             - name: Update Kubernetes manifest
               run: |
-                sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
+                sed -i -E "s|(sanojkv/app-github-actions:)[^ ]+|\1${{ github.sha }}|" pod.yaml
                 cat pod.yaml
             - name: Commit and push manifesta
               run: |
