@@ -3,12 +3,16 @@ on:
     push:
    
 jobs:
-  test:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      image_tag: ${{ steps.tag.outputs.value }}
+    steps:
+      - id: tag
+        run: echo "value=v1.2.3" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Run tests
-      run: npm test
-      continue-on-error: true
-
-    - name: Upload logs
-      run: echo "Uploading logs"
+      - run: echo "${{ needs.build.outputs.image_tag }}"
