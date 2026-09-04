@@ -24,8 +24,14 @@ jobs:
                tags: sanojkv/app-github-actions:${{ github.sha }}
             - name: Update Kubernetes manifest
               run: |
-               ls -ltr
-               sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
-               cat pod.yaml
+                sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
+            - name: Commit and push manifest
+              run: |
+               git config --global user.name "github-actions[bot]"
+               git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+               git add pod.yaml
+               git commit -m "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
+               git push
               
                          
