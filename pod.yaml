@@ -9,4 +9,4 @@ metadata:
 spec:
  containers:
    - name: nginx
-     image: sanojkv/app-github-actions:c947dcc8b54e0419f71fd4813582650962a8e0a7
+     image: sanojkv/app-github-actions:17e2f507fa7b198a635e56337c1b50748a2b935c
