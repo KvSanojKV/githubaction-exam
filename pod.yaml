@@ -6,4 +6,4 @@ metadata:
 spec:
  containers:
    - name: nginx
-     image: sanojkv/app-github-actions:IMAGE_TAD
+     image: sanojkv/app-github-actions:IMAGE_TAG
