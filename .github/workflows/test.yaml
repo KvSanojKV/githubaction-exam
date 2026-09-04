@@ -1,6 +1,8 @@
 name: Pipeline to build and push docker image
 on:
     push
+permissions:
+  contents: write
 jobs:
     build:
         runs-on: ubuntu-latest
