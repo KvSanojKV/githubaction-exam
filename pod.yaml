@@ -3,6 +3,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: alpine-github-actions
+  labels:
+    app: alpine-github-actions
+  
 spec:
  containers:
    - name: nginx
