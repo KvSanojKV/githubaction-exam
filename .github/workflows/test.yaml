@@ -20,6 +20,6 @@ jobs:
               uses: docker/build-push-action@v7
               with:
                push: true
-               tags: sanojkv/app-vmware:latest
+               tags: sanojkv/app-github-actions:latest
               
                          
