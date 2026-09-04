@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show repository
-        run: echo "Repository is ${{ github.ref }}"
+        run: echo "Repository is ${{ github.sha }}"
