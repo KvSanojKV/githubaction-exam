@@ -26,5 +26,6 @@ jobs:
               run: |
                ls -ltr
                sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
+               cat pod.yaml
               
                          
