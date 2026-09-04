@@ -27,6 +27,7 @@ jobs:
             - name: Update Kubernetes manifest
               run: |
                 sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
+                cat pod.yaml
             - name: Commit and push manifesta
               run: |
                git config --global user.name "github-actions[bot]"
