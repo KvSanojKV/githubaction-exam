@@ -20,7 +20,7 @@ jobs:
               uses: docker/build-push-action@v7
               with:
                push: true
-               tags: sanojkv/app-github-actions:latest
+             #  tags: sanojkv/app-github-actions:latest
                tags: sanojkv/app-github-actions:${{ github.repository }}"
               
                          
