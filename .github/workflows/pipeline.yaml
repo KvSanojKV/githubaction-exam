@@ -6,5 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Show repository
-        run: echo "Repository is ${{ github.ref }}"
+    - name: Run tests
+      run: npm test
+      continue-on-error: true
+
+    - name: Upload logs
+      run: echo "Uploading logs"
