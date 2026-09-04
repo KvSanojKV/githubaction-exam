@@ -21,5 +21,6 @@ jobs:
               with:
                push: true
                tags: sanojkv/app-github-actions:latest
+               tags: sanojkv/app-github-actions:${{ github.repository }}"
               
                          
