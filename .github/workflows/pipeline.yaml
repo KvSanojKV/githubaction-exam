@@ -1,8 +1,7 @@
 name: CICD pipeline
 on: 
     push:
-      paths:
-       - 'src/**'
+   
 jobs:
   test:
     runs-on: ubuntu-latest
