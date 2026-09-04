@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show repository
-        run: echo "Repository is ${{ github.repository }}"
+        run: echo "Repository is ${{ github.ref }}"
