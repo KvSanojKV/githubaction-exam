@@ -24,6 +24,7 @@ jobs:
                tags: sanojkv/app-github-actions:${{ github.sha }}
             - name: Update Kubernetes manifest
               run: |
+               uptime
                sed -i "s|IMAGE_TAG|${{ github.sha }}|g" pod.yaml
               
                          
