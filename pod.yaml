@@ -1,0 +1,9 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-github-actions
+spec:
+ containers:
+   - name: nginx
+     image: sanojkv/app-github-actions:IMAGE_TAD
